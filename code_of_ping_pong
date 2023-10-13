@@ -1,0 +1,26 @@
+from pygame import *
+import random
+from time import time as timer
+
+clock=time.Clock()
+FPS =60
+
+
+#окно игры
+Grey = (100,100,100)
+window = display.set_mode((600, 500))
+display.set_caption('Пинг Понг')
+#фон сцены 
+'''background = transform.scale(image.load('galaxy.jpg'),(700, 500))
+window.blit(background,(0,0))'''
+window.fill(Grey)
+game = True
+finish = True
+
+while game:
+    for e in event.get():
+        if e.type==QUIT:
+            game = False
+    
+    clock.tick(FPS)
+    display.update()
